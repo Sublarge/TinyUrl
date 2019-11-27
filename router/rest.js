@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// TODO: implement this service
-const urlService = require('../service/url-service-memory');
+const urlService = require('../service/url-service-mongo');
 
 let router = express.Router();
 let jsonParser = bodyParser.json();
