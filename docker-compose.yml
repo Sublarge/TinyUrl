@@ -1,0 +1,39 @@
+web-server:
+  build: ./nginx
+  ports:
+    - "8888:80"
+  links:
+    - "app1:app1"
+    - "app2:app2"
+    - "app3:app3"
+
+app1:
+  build: ./app
+  ports:
+    - "3000"
+  links:
+    - "db:db"
+    - "cache:cache"
+
+app2:
+  build: ./app
+  ports:
+    - "3000"
+  links:
+    - "db:db"
+    - "cache:cache"
+
+app3:
+  build: ./app
+  ports:
+    - "3000"
+  links:
+    - "db:db"
+    - "cache:cache"
+
+cache:
+  image: redis
+
+db:
+  image: mongo
+
