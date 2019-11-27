@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const urlService = require('../service/url-service-mongo');
+const urlService = require('../service/url-service-mongo-redis');
 
 let router = express.Router();
 let jsonParser = bodyParser.json();

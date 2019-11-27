@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const urlService = require('../service/url-service-mongo');
+const urlService = require('../service/url-service-mongo-redis');
 let router = express.Router();
 router.get('*', function (req, res) {
 
